@@ -34,14 +34,14 @@ var CommentList = React.createClass({
    render: function() {
       return (
          <div className="commentList">
-         Hello world! I sm s CommentList.
+         Hello world! I am a CommentList.
          </div>
       );
    }
 });
 
 var CommentForm = React.createClass({
-   render function() {
+   render: function() {
       return (
          <div className="commentForm">
          Hello, world! I am a CommentForm.
@@ -50,6 +50,18 @@ var CommentForm = React.createClass({
    }
 });
 
+var Comment = React.createClass({
+   render: function() {
+      return (
+         <div className="comment">
+            <h2 className="CommentAuthor">
+               {this.props.author} // access named attributes passed to component as keys //
+            </h2>
+            {this.props.children} // access nested elements //
+         </div>
+      );
+   }
+});
 
 
 
